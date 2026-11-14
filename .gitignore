@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Staged SPHEREx field data - local only, never committed
+public/data/
