@@ -271,8 +271,8 @@ export default function App() {
         <h2>The official test targets, by coordinates</h2>
         <p>
           The challenge names five test targets. The tool handles them by
-          their coordinates, not as picker fields. Two have measured results
-          so far:
+          their coordinates, not as picker fields. All five have measured
+          results:
         </p>
         <ul>
           <li>
@@ -285,10 +285,30 @@ export default function App() {
             pixel. Measured shift 0.72 pixels over 370.0 days, against 0.77
             predicted. Real motion, but under a pixel, too small to blink.
           </li>
+          <li>
+            <strong>WISE 0855:</strong> covered in 45 frames, but not
+            detected in any single frame, and its motion is only 1.3
+            pixels per year — too faint and too slow to blink. This is
+            the honest limit case.
+          </li>
+          <li>
+            <strong>RW Aurigae:</strong> measured. SPHEREx DR1 covers it
+            in 38 frames. It is detected in every measured frame, and its
+            brightness changed by a factor of 1.69 — about 0.57
+            magnitudes — across the epochs measured.
+          </li>
+          <li>
+            <strong>R Draconis:</strong> measured. SPHEREx DR1 covers it
+            in 59 frames. It is detected in every measured frame, and its
+            brightness changed by a factor of 2.99 — about 1.19
+            magnitudes — across the epochs measured. R Draconis is a Mira
+            variable, so a large change is expected; this is a measured
+            range over these epochs, not a full light curve.
+          </li>
         </ul>
         <p className="note">
-          WISE 0855, RW Aurigae, and R Draconis have no result in this
-          build. Their tests are still running.
+          Brightness ratios are raw, from unmasked flux only. Saturated
+          cores, no control-source normalization.
         </p>
       </section>
 
