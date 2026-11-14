@@ -154,11 +154,13 @@ export default function App() {
               Showing: {epochLabel}
             </span>
           </div>
-          <div className="controls">
-            <button type="button" onClick={togglePlay}>
-              {playing ? 'Pause blink' : 'Resume blink'}
-            </button>
-          </div>
+          {field.blink !== false && (
+            <div className="controls">
+              <button type="button" onClick={togglePlay}>
+                {playing ? 'Pause blink' : 'Resume blink'}
+              </button>
+            </div>
+          )}
           <div className="timeline" aria-label="Epoch timeline">
             {field.epochs.map((ep, i) => (
               <button
